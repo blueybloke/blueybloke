@@ -12,7 +12,7 @@ interface Props {
 const serializers = {
   types: {
     code: Code,
-    mainImage: Figure,
+    image: Figure,
   },
 };
 

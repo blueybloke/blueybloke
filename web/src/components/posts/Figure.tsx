@@ -17,18 +17,15 @@ const Figure: React.FC<Props> = ({ node }) => {
   }
 
   const fluidProps = getFluidGatsbyImage(
-    node.asset._id,
+    node.asset._ref,
     { maxWidth: 700 },
     {
-      projectId: process.env.GATSBY_SANITY_PROJECT_ID || "jq0d6242",
-      dataset:
-        process.env.GATSBY_SANITY_DATASET ||
-        process.env.NODE_ENV ||
-        "production",
+      projectId: "jq0d6242",
+      dataset: process.env.GATSBY_SANITY_DATASET || "production",
     }
   );
   return (
-    <figure>
+    <figure className="rounded-lg shadow-md">
       <Img fluid={fluidProps as FluidObject} alt={node.alt} />
       <figcaption>{node.caption}</figcaption>
     </figure>
