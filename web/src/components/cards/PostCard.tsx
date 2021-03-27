@@ -77,7 +77,10 @@ const PostCard: React.FC<PostCardProps> = ({
           <div className="categories flex flex-row flex-wrap gap-1">
             {categories.map(category => {
               return (
-                <div className="flex flex-row flex-nowrap bg-gray-50 bg-opacity-50 border-black border-opacity-30 border rounded-lg py-1 px-2 space-x-1 transition-colors">
+                <div
+                  key={category.title}
+                  className="flex flex-row flex-nowrap bg-gray-50 bg-opacity-50 border-black border-opacity-30 border rounded-lg py-1 px-2 space-x-1 transition-colors"
+                >
                   {category.icon ? (
                     <img
                       height={12}

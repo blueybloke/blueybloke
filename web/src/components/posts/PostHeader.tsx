@@ -38,7 +38,10 @@ const PostHeader: React.FC<Props> = ({
       <div className="flex flex-row self-center justify-center items-center flex-wrap max-w-sm gap-1">
         {categories.map((category: Category) => {
           return (
-            <div className="flex flex-row flex-nowrap bg-yellow-100 bg-opacity-50 shadow-sm rounded-lg py-1 px-2 space-x-1 transition-colors">
+            <div
+              key={category.title}
+              className="flex flex-row flex-nowrap bg-yellow-100 bg-opacity-50 shadow-sm rounded-lg py-1 px-2 space-x-1 transition-colors"
+            >
               {category.icon ? (
                 <img
                   height={12}

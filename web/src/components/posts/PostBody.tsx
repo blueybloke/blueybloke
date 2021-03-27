@@ -1,6 +1,7 @@
 import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import Code from "./Code";
+import Figure from "./Figure";
 
 interface Props {
   blocks: any;
@@ -11,6 +12,7 @@ interface Props {
 const serializers = {
   types: {
     code: Code,
+    mainImage: Figure,
   },
 };
 

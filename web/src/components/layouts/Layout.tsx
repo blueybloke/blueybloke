@@ -32,8 +32,6 @@ const Layout: React.FC = ({ children }) => {
 
   const { siteMetadata } = site;
 
-  const [open, setOpen] = React.useState(false);
-
   return (
     <div className="bg-gradient-to-r from-gray-50 to-yellow-100 min-w-screen min-h-screen">
       <div className="flex flex-col backdrop-blur">
@@ -54,7 +52,6 @@ const Layout: React.FC = ({ children }) => {
               <h3 className="text-sm font-light">{siteMetadata.description}</h3>
             </div>
           </Link>
-          {open ? <nav></nav> : <HiMenuAlt3 size={24} />}
         </header>
         <main>{children}</main>
       </div>
