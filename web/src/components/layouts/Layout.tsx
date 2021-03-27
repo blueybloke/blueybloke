@@ -37,7 +37,7 @@ const Layout: React.FC = ({ children }) => {
     <div className="bg-gradient-to-r from-gray-50 to-yellow-100 min-w-screen min-h-screen">
       <div className="flex flex-col backdrop-blur">
         <ErrorBoundary>
-          <header className="flex flex-nowrap justify-between items-center h-16 p-6 overflow-hidden">
+          <header className="flex flex-nowrap justify-between items-center min-h-24 p-6 overflow-hidden">
             <Link to="/" className="flex flex-nowrap items-center space-x-3">
               <Img
                 fluid={sanityAuthor.image.asset.fluid}
